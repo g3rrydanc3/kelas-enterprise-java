@@ -13,16 +13,11 @@
   <head>
     <title>$Title$</title>
   </head>
-
-  <%
-    String bgColor = request.getParameter("bgColor");
-    if (bgColor == null || bgColor.trim().equals("")){
-        bgColor="WHITE";
-    }
-
-  %>
-
-  <body bgcolor="<%= bgColor%>">
+  <body>
+  <jsp:include page="header.html"/>
+  <jsp:include page="welcome.jsp">
+      <jsp:param name="bgColor" value="YELLOW"/>
+  </jsp:include>
     <%!
       private int accessCount = 0;
       private String randomHeading(){
@@ -30,8 +25,8 @@
       }
     %>
     <%
-      double speed = Double.parseDouble(request.getParameter("distance"))/Double.parseDouble(request.getParameter("time"));
-      response.getWriter().println(speed);
+      //double speed = Double.parseDouble(request.getParameter("distance"))/Double.parseDouble(request.getParameter("time"));
+      //response.getWriter().println(speed);
       int localCount;
       synchronized (this){
         accessCount++;
