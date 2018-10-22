@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <servlet>
+        <servlet-name>ServletCookie</servlet-name>
+        <servlet-class>ServletCookie</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletCookie</servlet-name>
+        <url-pattern>/visitorcookie</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletSession</servlet-name>
+        <servlet-class>ServletSession</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletSession</servlet-name>
+        <url-pattern>/visitorsession</url-pattern>
+    </servlet-mapping>
+</web-app>
