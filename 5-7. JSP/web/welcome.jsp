@@ -20,5 +20,13 @@
 %>
 <body bgcolor="<%= bgColor%>">
 <h1>Have a nice day!</h1>
+
+<jsp:useBean id="stringBean" class="edu.stts.StringBean" scope="application"/>
+Initial value (from JSP expression) :
+<br>
+<jsp:getProperty name="stringBean" property="message"/>
+<br>
+<%= stringBean.getMessage() %>
+
 </body>
 </html>

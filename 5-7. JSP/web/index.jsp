@@ -47,5 +47,13 @@
     <% } else { %>
       <h1>Mugo-mugo dinomu apik!</h1>
     <% }%>
+
+    <jsp:useBean id="stringBean" class="edu.stts.StringBean" scope="session"/>
+    Initial value (from JSP expression) :
+    <br>
+    <jsp:getProperty name="stringBean" property="message"/>
+    <br>
+    <%= stringBean.getMessage() %>
+    <br>
   </body>
 </html>

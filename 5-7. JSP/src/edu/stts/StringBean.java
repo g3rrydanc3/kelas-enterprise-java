@@ -1,7 +1,7 @@
 package edu.stts;
 
 public class StringBean {
-    private String message = "Tidak ada pesan";
+    private String message;
 
     public String getMessage() {
         return message;
